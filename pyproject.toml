@@ -1,0 +1,28 @@
+[project]
+name = "runapi"
+version = "0.1.0"
+description = "A small HTTP service"
+readme = "README.md"
+authors = [
+    { name = "Bui Dai", email = "ss1280dzzz@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+runapi = "runapi:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
